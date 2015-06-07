@@ -22,7 +22,7 @@ def fetch(pid):
     json_result = json.loads(result)
     datetime = json_result['time']
 
-    print('Process %s: %s' % (pid, datetime))
+    # print('Process %s: %s' % (pid, datetime))
     return json_result['time']
 
 def synchronous():
@@ -32,10 +32,11 @@ def synchronous():
 def asynchronous():
     threads = [Greenlet.spawn(fetch, i) for i in range(10)]
     gevent.joinall(threads)
-    print [thread.value for thread in threads]
+    times = [thread.value for thread in threads]
+    return '->'.join(times)
 
-print('Synchronous:')
-synchronous()
-
-print('Asynchronous:')
-asynchronous()
+# print('Synchronous:')
+# synchronous()
+#
+# print('Asynchronous:')
+# asynchronous()
