@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    Project:
+    Project: 获取字典中的最大值最小值
     Purpose: 
     Version:
     Author:  ZG
