@@ -7,7 +7,7 @@
     Date:    15/7/5
 """
 
-from langconv import *
+from testLibrary.langconv import *
 
 
 def f2j(line):

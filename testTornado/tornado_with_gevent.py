@@ -7,7 +7,7 @@
     Date:    15/6/7
 """
 
-import get_value_of_gevent
+from testLibrary import get_value_of_gevent
 
 import tornado.httpserver
 import tornado.ioloop
